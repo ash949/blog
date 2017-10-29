@@ -1,3 +1,48 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import 'shared';
+
+/*!
+ * froala_editor v2.7.1 (https://www.froala.com/wysiwyg-editor)
+ * License https://froala.com/wysiwyg-editor/terms/
+ * Copyright 2014-2017 Froala Labs
+ */
+
+#posts-table {
+  border: 1px solid $font-color-1-hi;
+
+  tr {
+    border-bottom: 1px solid $font-color-1-hi;
+    th,
+    td {
+      border-right: 1px solid $font-color-1-hi;
+    }
+  }
+
+  th,
+  td {
+    padding: 1em;
+  }
+
+  th{
+    @extend .text-center;
+    @extend .font-color-1-vhi;
+    @extend .background-color-1-lw;
+  }
+}
+
+article {
+  header {
+    @extend .margin-bottom-sm;
+  }
+
+  .featured-tag {
+    @extend .font-color-1-vhi;
+    @extend .background-color-2-lw;
+    padding: 0.1em 0.7em;
+    display: inline-block;
+  }
+}

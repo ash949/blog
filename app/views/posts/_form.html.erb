@@ -11,22 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group col-xs-12 col-sm-12 col-md-12">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
+    <%= form.text_field :title, id: :post_title, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group col-xs-12 col-sm-12 col-md-12">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
+    <%= form.text_area :body, id: :post_body, class: "form-control post-body-editor" %>
   </div>
+  
 
-  <div class="field">
+  <div class="field form-group col-xs-1 col-sm-1 col-md-1">
     <%= form.label :featured %>
-    <%= form.check_box :featured, id: :post_featured %>
+    <%= form.check_box :featured, id: :post_featured, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="clearfix"></div>
+
+  <div class="actions col-xs-12 col-sm-6 col-md-3">
+    <%= form.submit%>
   </div>
+  
+  
 <% end %>
+<script> $(function() { $('textarea').froalaEditor() }); </script>
