@@ -4,6 +4,37 @@
 
 @import 'shared';
 
-section {
-  margin-bottom: 2em;
+section,
+article {
+  @extend .margin-bottom-md;
+}
+
+#homepage {
+  @extend .padding-top-lg;
+  
+  #main-content,
+  #sidebar {
+    @extend .box-shadow-thin;
+    background-color: $font-color-1-vhi;
+  }
+}
+
+#main-content {
+  hr {
+    @extend .background-color-2-vhi;
+    border-color: $background-color-2-vhi;
+  }
+}
+
+#sidebar{
+  
+  article {
+    margin-bottom: 0;
+  }
+
+  a {
+    @extend .font-color-2-hi;
+    text-align: justify;
+    margin: 0;
+  }
 }

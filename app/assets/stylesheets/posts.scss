@@ -39,10 +39,20 @@ article {
     @extend .margin-bottom-sm;
   }
 
+  header,
+  .fr-view {
+    text-align: justify;
+  }
+
   .featured-tag {
     @extend .font-color-1-vhi;
     @extend .background-color-2-lw;
     padding: 0.1em 0.7em;
     display: inline-block;
+  }
+
+  .date-created {
+    @extend .font-size-0-8;
+    float: right;
   }
 }

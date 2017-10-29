@@ -1,2 +1,23 @@
-<h1>HomeAboutContact#index</h1>
-<p>Find me in app/views/home_about_contact/index.html.erb</p>
+<section id="homepage" class="container">
+  <div class="row">
+    <section id="main-content" class="col-xs-12 col-sm-12 col-md-8">
+      <header>
+        <h1><strong>Posts</strong></h1>
+      </header>
+      <% render_edit_show_btns = false %>
+      <% @posts.each do |post| %>
+        <%= render partial: 'posts/post', locals: {post: post} %>
+      <% end %>
+    </section>
+    <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
+      <header>
+        <h1><strong>Featured</strong></h1>
+      <% @posts.each do |post| %>
+        <% if ( post.featured ) %>
+          <%= render partial: 'posts/featured', locals: {post: post} %>
+        <% end %>
+      <% end %>
+      <hr>
+    </aside>
+  </div>
+</section><!-- end - home page section -->

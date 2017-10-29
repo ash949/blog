@@ -1,24 +1,4 @@
 <section class="container">
-  <article>
-
-    <header>
-      <h2><strong><%= @post.title%></strong></h2>
-      <p class="featured-tag"><%= "featured" if (@post.featured) %></p>
-      <p class="date-created"><strong>Submitted in: </strong><%= @post.created_at%></p>
-    </header>
-
-    <hr>
-
-    <div class="fr-element fr-view">
-      <%= @post.body.html_safe %>
-    </div>
-
-    <br>
-    <hr>
-    <br>
-
-    <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' %> |
-    <%= link_to 'Back', posts_path, class: 'btn btn-primary'%>
-  </article>
-
+  <% render_edit_show_btns = true %>
+  <%= render partial: 'post', locals: {post: @post, render_edit_show_btns: render_edit_show_btns } %>
 </section><!-- end - show single post-->

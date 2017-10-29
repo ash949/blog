@@ -1,0 +1,17 @@
+<article>
+  <header>
+    <h3><%= post.title%></h3>
+    <% if (post.featured) %>
+      <p class="featured-tag"><%= "featured" if (post.featured) %></p>
+    <% end %>
+    <p class="date-created"><strong>Submitted in: </strong><%= post.created_at%></p>
+    <div class="clearfix"></div>
+  </header>
+
+  <div class="fr-element fr-view">
+    <%= post.body.html_safe %>
+  </div>
+
+  <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %> |
+  <%= link_to 'Dashboard', posts_path, class: 'btn btn-primary'%>
+</article>
