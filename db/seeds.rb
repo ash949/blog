@@ -15,5 +15,4 @@ Post.create!(title: 'Where can I get some?', body: "There are many variations of
 
 
 Comment.create!(user: User.first, post: Post.first, rating: 1, body: 'bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad bad ')
-Comment.create!(user: User.first, post: Post.first, rating: 4, body: "nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice ")
-Comment.create!(user: User.first, post: Post.first, rating: 2, body: "meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh meh ")
+Comment.create!(user: User.last, post: Post.first, rating: 4, body: "nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice ")
