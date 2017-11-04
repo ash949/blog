@@ -4,5 +4,5 @@
   <% errors.each do |message| %>
     <% final_message += message + '<br>'%>
   <% end %>
-  <%= render partial: 'notice', locals: {type: 'danger', message: final_message} %>
+  <%= render partial: 'shared/notice', locals: {type: 'danger', message: final_message} %>
 </div>

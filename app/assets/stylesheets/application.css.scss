@@ -1,4 +1,38 @@
- @import 'shared';
+@import 'jquery.raty';
+@import 'shared';
 
- @import 'home_about_contact';
- @import 'posts';
+@import 'home_about_contact';
+@import 'posts';
+
+.navbar-right {
+  >li:last-child {
+    padding-right: 1em;
+  }
+}
+
+.poped-out {
+  @extend .box-shadow-thin;
+  background-color: $font-color-1-vhi;
+}
+
+.comment {
+  @extend .margin-bottom-md;
+  border-bottom: 1px solid $font-color-1-vhi;
+
+  .comment-time {
+    @extend .display-block;
+    @extend .font-size-0-8;
+    float: right;
+
+  }
+
+  .rated {
+    @extend .display-block;
+    @extend .margin-bottom-sm;
+  }
+
+  p {
+    @extend .font-bold-normal;
+    word-wrap: break-word;
+  }
+}

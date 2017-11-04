@@ -9,18 +9,12 @@ article {
 
 #homepage {
   @extend .padding-top-lg;
-  
-  #main-content,
-  #sidebar {
-    @extend .box-shadow-thin;
-    background-color: $font-color-1-vhi;
-  }
 }
 
 #main-content {
-  hr {
+  hr:not(:last-child) {
     @extend .background-color-2-vhi;
-    border-color: $background-color-2-vhi;
+    border-color: $background-color-1-lw;
   }
 }
 

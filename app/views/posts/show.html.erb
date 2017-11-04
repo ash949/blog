@@ -1,4 +1,15 @@
-<section class="container">
-  <% render_edit_show_btns = true %>
-  <%= render partial: 'post', locals: {post: @post, render_edit_show_btns: render_edit_show_btns } %>
+<section class="single-post container">
+  <div class="row">
+    <div class="poped-out">
+      <% render_edit_show_btns = true %>
+      <%= render partial: 'post', locals: {post: @post, render_edit_show_btns: render_edit_show_btns } %>
+      
+    </div>
+  </div>
 </section><!-- end - show single post-->
+
+<% if user_signed_in? %>
+  <%= render partial: 'comment_form'%>
+<% end %>
+
+<%= render partial: 'comments'%>

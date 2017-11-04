@@ -1,15 +1,16 @@
 <section id="homepage" class="container">
   <div class="row">
-    <section id="main-content" class="col-xs-12 col-sm-12 col-md-8">
+    <section id="main-content" class="col-xs-12 col-sm-12 col-md-8 poped-out">
       <header>
         <h1><strong>Posts</strong></h1>
       </header>
       <% render_edit_show_btns = false %>
       <% @posts.each do |post| %>
         <%= render partial: 'posts/post', locals: {post: post} %>
+        <hr>
       <% end %>
     </section>
-    <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1">
+    <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1 poped-out">
       <header>
         <h1><strong>Featured</strong></h1>
       <% @posts.each do |post| %>

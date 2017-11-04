@@ -13,7 +13,10 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
+//= require jquery.raty
+//= require site
 //= require_tree .
-$(document).ready(function(){
+
+$(document).on('turbolinks:data', function(){
   $('.alert').delay(7000).fadeOut(300);
 });
