@@ -1,11 +1,11 @@
 <% if notice && notice.length != 0 %>
-  <%= render partial: 'notice', locals: {type: 'success', message: notice}%>
+  <%= render partial: 'shared/notice', locals: {type: 'success', message: notice}%>
 <% elsif alert && alert.length != 0 %>
-  <%= render partial: 'notice', locals: {type: 'danger', message: alert}%>
+  <%= render partial: 'shared/notice', locals: {type: 'danger', message: alert}%>
 <% end %>
 <% if flash && flash[:error] %>
-  <%= render partial: 'errors_flash', locals: {errors: flash[:error], model: flash[:model] }%>
+  <%= render partial: 'shared/errors_flash', locals: {errors: flash[:error], model: flash[:model] }%>
 <% end %>
-<% devise_error_messages! && devise_error_messages!.length != 0 %>
-  <%= render partial: 'notice', locals: {type: 'danger', message: devise_error_messages! } %>
+<% if devise_error_messages! && devise_error_messages!.length != 0 %>
+  <%= render partial: 'shared/notice', locals: {type: 'danger', message: devise_error_messages! } %>
 <% end %>
