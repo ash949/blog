@@ -12,7 +12,9 @@
     <%= post.body.html_safe %>
   </div>
 
-  <%= link_to 'Read More', post, class: 'btn btn-warning'%> |
-  <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %> |
-  <%= link_to 'Dashboard', posts_path, class: 'btn btn-primary'%>
+  <%= link_to 'Read More', post, class: 'btn btn-warning'%>
+  <% if current_user && current_user.admin?%>
+  | <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %> |
+    <%= link_to 'Posts Dashboard', posts_path, class: 'btn btn-primary'%>
+  <% end %>
 </article>
