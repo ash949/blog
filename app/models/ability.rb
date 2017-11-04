@@ -10,6 +10,7 @@ class Ability
         can :create, Comment, user_id: user.id
         can :update, User, id: user.id
         can :edit, User, id: user.id
+        can :show, User, id: user.id
         can :show, Post
       end
   end

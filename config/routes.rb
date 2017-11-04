@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'home_about_contact/contact'
 
+  resources :users
   resources :posts do
     resources :comments
   end
