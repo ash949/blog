@@ -1,6 +1,6 @@
 <article class="post">
   <header>
-    <h3><%= post.title%></h3>
+    <h2><%= post.title%></h2>
     <% if (post.featured) %>
       <p class="featured-tag"><%= "featured" if (post.featured) %></p>
     <% end %>
@@ -8,13 +8,15 @@
     <div class="clearfix"></div>
   </header>
 
-  <div class="fr-element fr-view">
+  <div class="fr-element fr-view margin-bottom-md">
     <%= post.body.html_safe %>
   </div>
 
-  <%= link_to 'Read More', post, class: 'btn btn-warning'%>
+  <% if !params[:id]%>
+    <%= link_to 'Read More', post, class: 'btn btn-warning'%>  
+  <% end %>
   <% if current_user && current_user.admin?%>
-  | <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %> |
+  <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary' %> |
     <%= link_to 'Posts Dashboard', posts_path, class: 'btn btn-primary'%>
   <% end %>
 </article>

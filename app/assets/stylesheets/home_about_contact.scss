@@ -14,7 +14,7 @@ article {
 #main-content {
   hr:not(:last-child) {
     @extend .background-color-2-vhi;
-    border-color: $background-color-1-lw;
+    border-color: $font-color-1-hi;
   }
 }
 

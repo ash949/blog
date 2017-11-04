@@ -1,11 +1,11 @@
-<section class="container margin-bottom-md poped-out">
+<section>
   <header>
     <h3><strong>Users Reviews</strong></h3>
   </header>
-  <ul class="row">
+  <ul>
   <% if @comments.count > 0 %>
     <% @comments.each do |comment| %>
-      <li class="comment col-xs-12 col-sm-12 col-md-8">
+      <li class="comment">
         <%= render partial: 'comment', locals: {comment: comment}%>
       </li>
     <% end %>

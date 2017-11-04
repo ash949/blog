@@ -12,6 +12,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Post.all
+    @featured_posts = @posts.where('featured = ?', true)
     @comments = @post.comments
     @comments = @post.comments.order(created_at: :desc).paginate(page: params[:page], per_page:10)
   end

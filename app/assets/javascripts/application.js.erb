@@ -19,4 +19,8 @@
 
 $(document).on('turbolinks:load', function(){
   $('.alert').delay(7000).fadeOut(300);
+
+  if ( $('#main-content .post .fr-view').text().length > 300 ){
+    $('#main-content .post .fr-view').text( $('#main-content .post .fr-view').text().substr(0,300) + '...' );
+  }
 });

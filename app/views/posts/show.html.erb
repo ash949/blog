@@ -1,15 +1,16 @@
-<section class="single-post container">
+<div class="container">
   <div class="row">
-    <div class="poped-out">
-      <% render_edit_show_btns = true %>
-      <%= render partial: 'post', locals: {post: @post, render_edit_show_btns: render_edit_show_btns } %>
-      
-    </div>
+  
+    <section class="single-post col-xs-12 col-sm-12 col-md-8 poped-out">
+      <%= render partial: 'post', locals: {post: @post } %>
+      <hr>
+      <% if user_signed_in? %>
+        <%= render partial: 'comment_form'%>
+        <hr>
+      <% end %>
+      <%= render partial: 'comments'%>
+    </section><!-- end - show single post-->
+    <%= render partial: 'shared/sidebar'%>
+
   </div>
-</section><!-- end - show single post-->
-
-<% if user_signed_in? %>
-  <%= render partial: 'comment_form'%>
-<% end %>
-
-<%= render partial: 'comments'%>
+</div>

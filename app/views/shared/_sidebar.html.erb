@@ -1,0 +1,10 @@
+<aside id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-md-offset-1 poped-out">
+  <header>
+    <h1><strong>Featured</strong></h1>
+  <% @featured_posts.each do |post| %>
+    <% if ( post.featured ) %>
+      <%= render partial: 'posts/featured', locals: {post: post} %>
+    <% end %>
+  <% end %>
+  <hr>
+</aside>

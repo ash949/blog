@@ -17,7 +17,6 @@
 
 .comment {
   @extend .margin-bottom-md;
-  border-bottom: 1px solid $font-color-1-vhi;
 
   .comment-time {
     @extend .display-block;
@@ -36,3 +35,4 @@
     word-wrap: break-word;
   }
 }
+

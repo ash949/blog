@@ -1,24 +1,21 @@
-<section class="container review-form margin-bottom-md poped-out">
+<section class="review-form margin-bottom-lg">
   <header>
     <h3><strong>Write a Review</strong></h3>
   </header>
-  
-  <%= form_with( model: [@post, Comment], class: 'row') do |form| %>
-    <div class="field form-group col-xs-12 col-sm-12 col-md-8">
+  <%= form_with( model: [@post, Comment]) do |form| %>
+    <div class="field form-group">
       <%= form.label 'Your Review' %>
       <%= form.text_area :body, class: 'form-control' %>
     </div>
 
-    <div class="field form-group col-xs-12 col-sm-12 col-md-8">
+    <div class="field form-group">
       <%= form.label :rating %>
       <span class="rating "></span>
     </div>
     <div class="clearfix"></div>
 
-    <div class="form-group col-xs-6 col-sm-4 col-md-2">
+    <div class="form-group">
       <%= form.submit 'Submit Review', class: 'btn btn-primary'%>
     </div>
   <% end %>
 </section><!-- end - review form -->
-<div class="clearfix"></div>
-<hr>

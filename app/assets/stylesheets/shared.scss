@@ -284,6 +284,30 @@ textarea,
   @extend .border-radius-removed;
 }
 
+.table {
+  border: 1px solid $font-color-1-hi;
+
+  tr {
+    border-bottom: 1px solid $font-color-1-hi;
+    th,
+    td {
+      border-right: 1px solid $font-color-1-hi;
+    }
+  }
+
+  th,
+  td {
+    padding: 1em;
+  }
+
+  th{
+    @extend .text-center;
+    @extend .font-color-1-vhi;
+    @extend .background-color-1-lw;
+  }
+}
+
+
 // Navbar Style ==========================================
 .navbar {
   @extend .background-color-1-vhi;
