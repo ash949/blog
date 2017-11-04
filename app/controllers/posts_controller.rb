@@ -36,6 +36,10 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
+        @users = User.all
+        @users.non_admin_users.each do |user|
+          UserMailer.notify_on_post(user.name, user.email, @post.title, post_url(@post.id) ).deliver_now
+        end
       else
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
